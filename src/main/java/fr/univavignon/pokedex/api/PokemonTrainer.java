@@ -1,4 +1,4 @@
-package fr.univavignon.pokedex.api;
+package main.java.fr.univavignon.pokedex.api;
 
 /**
  * Trainer POJO.

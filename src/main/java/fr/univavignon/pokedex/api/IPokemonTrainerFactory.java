@@ -1,4 +1,4 @@
-package fr.univavignon.pokedex.api;
+package main.java.fr.univavignon.pokedex.api;
 
 /**
  * Factory interface for class that aims to create PokemonTrainer instance.
