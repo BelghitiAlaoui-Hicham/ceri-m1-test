@@ -70,7 +70,7 @@ public class IPokemonTrainerFactoryTest {
 		Mockito.when(iPokedex.getPokemons(ordre)).thenAnswer(a -> Arrays.asList(new Pokemon[] {pokemon}));
 		Mockito.when(pokedexFactory.createPokedex(pokemonMetadataProvider, iPokemonFactory)).thenAnswer(a -> iPokedex);
 
-		Mockito.when(iTrainerFactory.createTrainer("Moi", Team.VALOR, pokedexFactory)).thenAnswer(a -> {
+		Mockito.when(iTrainerFactory.createTrainer("hicham", Team.VALOR, pokedexFactory)).thenAnswer(a -> {
 			return new PokemonTrainer("hicham", Team.MYSTIC, iPokedex);
 		});
 	}

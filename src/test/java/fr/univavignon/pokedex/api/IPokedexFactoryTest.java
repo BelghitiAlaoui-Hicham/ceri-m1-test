@@ -33,7 +33,7 @@ public class IPokedexFactoryTest {
 	private IPokedexFactory pokedexFactory;
 	
 	@Mock
-	private IPokemonMetadataProvider metadataProvider;
+	private IPokemonMetadataProvider pokemonMetadataProvider;
 	
 	@Mock
 	private IPokemonFactory iPokemonFactory;
@@ -47,7 +47,7 @@ public class IPokedexFactoryTest {
 	
 	@Before
 	public void setUp() throws PokedexException {
-		Mockito.when(metadataProvider.getPokemonMetadata(0)).thenAnswer(a -> {
+		Mockito.when(pokemonMetadataProvider.getPokemonMetadata(0)).thenAnswer(a -> {
 			return new PokemonMetadata(0, "Bulbizarre", 126, 126, 90);
 		});
 		
@@ -61,19 +61,18 @@ public class IPokedexFactoryTest {
 		Mockito.when(iPokedex.getPokemons()).thenAnswer(a -> Arrays.asList(new Pokemon[] {pokemon} ));
 		Mockito.when(iPokedex.getPokemons(null)).thenAnswer(a -> Arrays.asList(new Pokemon[] {pokemon}  ));
 		Mockito.when(iPokedex.getPokemons(ordre)).thenAnswer(a -> Arrays.asList(new Pokemon[] {pokemon}));
-		Mockito.when(pokedexFactory.createPokedex(metadataProvider, iPokemonFactory)).thenAnswer(a -> iPokedex);
+		Mockito.when(pokedexFactory.createPokedex(pokemonMetadataProvider, iPokemonFactory)).thenAnswer(a -> iPokedex);
 	}
 	
 	@Test
 	public void testCreatePokedex() {
 		try {
-			IPokedex px = pokedexFactory.createPokedex(metadataProvider, iPokemonFactory);
+			IPokedex px = pokedexFactory.createPokedex(pokemonMetadataProvider, iPokemonFactory);
 			Assert.assertEquals(0, px.addPokemon(pokemon));
 			Assert.assertEquals(1, px.size());
 			Assert.assertEquals("Bulbizarre", px.getPokemons().get(0).getName());
 			Assert.assertEquals("Bulbizarre", px.getPokemons(ordre).get(0).getName());
-			Assert.assertEquals("Bulbizarre", px.getPokemon(0).getName());
-			Assert.assertEquals("Bulbizarre", px.getPokemons(null).get(0).getName());	
+			Assert.assertEquals("Bulbizarre", px.getPokemons(null).get(0).getName());
 		}
 		catch (Exception ex) {
 			ex.printStackTrace();
