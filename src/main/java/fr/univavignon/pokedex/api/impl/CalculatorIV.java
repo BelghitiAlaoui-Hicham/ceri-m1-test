@@ -9,22 +9,22 @@ import io.github.bonigarcia.wdm.ChromeDriverManager;
 public class CalculatorIV {
 
     private static final String  PATH_IV = "https://pokeassistant.com/main/ivcalculator?locale=en";
-    private WebDriver driver;
+    private WebDriver webDriver;
 
     public CalculatorIV() {
         ChromeDriverManager.getInstance().setup();
-        driver = new ChromeDriver();
+        webDriver = new ChromeDriver();
     }
     public int calculateIV(String name, int cp, int hp, int dust) {
 
-        driver.get(PATH_IV);
+        webDriver.get(PATH_IV);
         
-        driver.findElement(By.xpath("//*[@id=\"search_pokemon_name\"]")).sendKeys(name);
-        driver.findElement(By.xpath("//*[@class=\"tt-dataset tt-dataset-0\"]")).click();
-        driver.findElement(By.xpath("//*[@id=\"search_cp\"]")).sendKeys(String.valueOf(cp));
-        driver.findElement(By.xpath("//*[@id=\"search_hp\"]")).sendKeys(String.valueOf(hp));
-        driver.findElement(By.xpath("//*[@id=\"search_dust\"]")).sendKeys(String.valueOf(dust));
-        driver.findElement(By.xpath("//*[@id=\"calculatebtn\"]")).click();
+        webDriver.findElement(By.xpath("//*[@id=\"search_pokemon_name\"]")).sendKeys(name);
+        webDriver.findElement(By.xpath("//*[@class=\"tt-dataset tt-dataset-0\"]")).click();
+        webDriver.findElement(By.xpath("//*[@id=\"search_cp\"]")).sendKeys(String.valueOf(cp));
+        webDriver.findElement(By.xpath("//*[@id=\"search_hp\"]")).sendKeys(String.valueOf(hp));
+        webDriver.findElement(By.xpath("//*[@id=\"search_dust\"]")).sendKeys(String.valueOf(dust));
+        webDriver.findElement(By.xpath("//*[@id=\"calculatebtn\"]")).click();
         
         try {
             Thread.sleep(800);
@@ -32,9 +32,9 @@ public class CalculatorIV {
             e.printStackTrace();
         }
         
-        String res = driver.findElement(By.xpath("//*[@id=\"possibleCombinationsStringmax\"]//b")).getText();
+        String res = webDriver.findElement(By.xpath("//*[@id=\"possibleCombinationsStringmax\"]//b")).getText();
         
-        driver.quit();
+        webDriver.quit();
         
         return Math.round(Float.parseFloat(res.replace("%", "")));
     }

@@ -19,7 +19,7 @@ import static fr.univavignon.pokedex.api.impl.PokemonMetadataProvider.pokemonMet
 public class Pokedex implements IPokedex {
 	
 	
-    private IPokemonFactory pokemonfactory;
+    private IPokemonFactory pkmFactory;
     private IPokemonMetadataProvider provider;
     private List<Pokemon> listOfpokemon;
     
@@ -38,12 +38,12 @@ public class Pokedex implements IPokedex {
     
 
 	public IPokemonFactory getPokemonfactory() {
-		return pokemonfactory;
+		return pkmFactory;
 	}
 
 
 	public void setPokemonfactory(IPokemonFactory pokemonfactory) {
-		this.pokemonfactory = pokemonfactory;
+		this.pkmFactory = pokemonfactory;
 	}
 
 

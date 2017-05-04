@@ -1,13 +1,16 @@
 package fr.univavignon.pokedex.api.impl;
 
-import org.junit.Before;
 
-import fr.univavignon.pokedex.api.IPokedexFactoryTest;
+import fr.univavignon.pokedex.api.IPokemonFactory;
+import fr.univavignon.pokedex.api.IPokemonFactoryTest;
 
-public class PokemonFactoryTest extends IPokedexFactoryTest{
-	@Before
-	public void setUp() {
-		iPokemonFactory = new PokemonFactory();
-		
-	}
+import static fr.univavignon.pokedex.api.impl.PokemonFactory.pokemonFactory;
+import java.io.IOException;
+
+
+public class PokemonFactoryTest extends IPokemonFactoryTest{
+	@Override
+    public IPokemonFactory getProvider() throws IOException {
+        return pokemonFactory();
+    }
 }
