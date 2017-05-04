@@ -1,4 +1,4 @@
-package test.java.fr.univavignon.pokedex.api;
+package fr.univavignon.pokedex.api;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -9,9 +9,9 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
-import main.java.fr.univavignon.pokedex.api.IPokemonMetadataProvider;
-import main.java.fr.univavignon.pokedex.api.PokedexException;
-import main.java.fr.univavignon.pokedex.api.PokemonMetadata;
+import fr.univavignon.pokedex.api.IPokemonMetadataProvider;
+import fr.univavignon.pokedex.api.PokedexException;
+import fr.univavignon.pokedex.api.PokemonMetadata;
 
 public class IPokemonMetadataProviderTest {
 

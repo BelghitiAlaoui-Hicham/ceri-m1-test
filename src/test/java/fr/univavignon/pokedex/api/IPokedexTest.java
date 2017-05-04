@@ -1,5 +1,6 @@
-package test.java.fr.univavignon.pokedex.api;
+package fr.univavignon.pokedex.api;
 
+import java.io.IOException;
 import java.util.Arrays;
 
 import org.junit.Assert;
@@ -11,14 +12,14 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
-import main.java.fr.univavignon.pokedex.api.IPokedex;
-import main.java.fr.univavignon.pokedex.api.IPokedexFactory;
-import main.java.fr.univavignon.pokedex.api.IPokemonFactory;
-import main.java.fr.univavignon.pokedex.api.IPokemonMetadataProvider;
-import main.java.fr.univavignon.pokedex.api.PokedexException;
-import main.java.fr.univavignon.pokedex.api.Pokemon;
-import main.java.fr.univavignon.pokedex.api.PokemonComparators;
-import main.java.fr.univavignon.pokedex.api.PokemonMetadata;
+import fr.univavignon.pokedex.api.IPokedex;
+import fr.univavignon.pokedex.api.IPokedexFactory;
+import fr.univavignon.pokedex.api.IPokemonFactory;
+import fr.univavignon.pokedex.api.IPokemonMetadataProvider;
+import fr.univavignon.pokedex.api.PokedexException;
+import fr.univavignon.pokedex.api.Pokemon;
+import fr.univavignon.pokedex.api.PokemonComparators;
+import fr.univavignon.pokedex.api.PokemonMetadata;
 
 public class IPokedexTest {
 	
@@ -40,7 +41,7 @@ public class IPokedexTest {
 	public MockitoRule mockitoRule = MockitoJUnit.rule();
 	
 	@Before
-	public void setUp() throws PokedexException {
+	public void setUp() throws PokedexException, IOException {
 		Mockito.when(iPokedex.size()).thenAnswer(a -> 1);
 		Mockito.when(iPokedex.addPokemon(null)).thenAnswer(a -> 0);
 		Mockito.when(iPokedex.getPokemon(0)).thenAnswer(a -> pokemon);

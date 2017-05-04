@@ -1,4 +1,4 @@
-package main.java.fr.univavignon.pokedex.api;
+package fr.univavignon.pokedex.api;
 
 import java.io.IOException;
 

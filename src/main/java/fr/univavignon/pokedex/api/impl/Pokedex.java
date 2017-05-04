@@ -1,4 +1,4 @@
-package main.java.fr.univavignon.pokedex.api.impl;
+package fr.univavignon.pokedex.api.impl;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -6,15 +6,15 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-import main.java.fr.univavignon.pokedex.api.IPokedex;
-import main.java.fr.univavignon.pokedex.api.IPokemonFactory;
-import main.java.fr.univavignon.pokedex.api.IPokemonMetadataProvider;
-import main.java.fr.univavignon.pokedex.api.PokedexException;
-import main.java.fr.univavignon.pokedex.api.Pokemon;
-import main.java.fr.univavignon.pokedex.api.PokemonMetadata;
+import fr.univavignon.pokedex.api.IPokedex;
+import fr.univavignon.pokedex.api.IPokemonFactory;
+import fr.univavignon.pokedex.api.IPokemonMetadataProvider;
+import fr.univavignon.pokedex.api.PokedexException;
+import fr.univavignon.pokedex.api.Pokemon;
+import fr.univavignon.pokedex.api.PokemonMetadata;
 
-import static main.java.fr.univavignon.pokedex.api.impl.PokemonFactory.pokemonFactory;
-import static main.java.fr.univavignon.pokedex.api.impl.PokemonMetadataProvider.pokemonMetadataProvider;
+import static fr.univavignon.pokedex.api.impl.PokemonFactory.pokemonFactory;
+import static fr.univavignon.pokedex.api.impl.PokemonMetadataProvider.pokemonMetadataProvider;
 
 public class Pokedex implements IPokedex {
 	

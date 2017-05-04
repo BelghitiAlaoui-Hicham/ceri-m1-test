@@ -1,11 +1,11 @@
-package main.java.fr.univavignon.pokedex.api.impl;
+package fr.univavignon.pokedex.api.impl;
 
 import java.io.IOException;
 
-import main.java.fr.univavignon.pokedex.api.IPokedex;
-import main.java.fr.univavignon.pokedex.api.IPokedexFactory;
-import main.java.fr.univavignon.pokedex.api.IPokemonFactory;
-import main.java.fr.univavignon.pokedex.api.IPokemonMetadataProvider;
+import fr.univavignon.pokedex.api.IPokedex;
+import fr.univavignon.pokedex.api.IPokedexFactory;
+import fr.univavignon.pokedex.api.IPokemonFactory;
+import fr.univavignon.pokedex.api.IPokemonMetadataProvider;
 
 public class PokedexFactory implements IPokedexFactory {
 	private static PokedexFactory instance = null;

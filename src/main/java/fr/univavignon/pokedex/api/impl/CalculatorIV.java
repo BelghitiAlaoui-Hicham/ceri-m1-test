@@ -1,4 +1,4 @@
-package main.java.fr.univavignon.pokedex.api.impl;
+package fr.univavignon.pokedex.api.impl;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

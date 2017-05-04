@@ -1,10 +1,10 @@
-package main.java.fr.univavignon.pokedex.api.impl;
+package fr.univavignon.pokedex.api.impl;
 
-import main.java.fr.univavignon.pokedex.api.IPokemonFactory;
-import main.java.fr.univavignon.pokedex.api.PokedexException;
-import main.java.fr.univavignon.pokedex.api.Pokemon;
-import main.java.fr.univavignon.pokedex.api.PokemonMetadata;
-import static main.java.fr.univavignon.pokedex.api.impl.PokemonMetadataProvider.pokemonMetadataProvider;
+import fr.univavignon.pokedex.api.IPokemonFactory;
+import fr.univavignon.pokedex.api.PokedexException;
+import fr.univavignon.pokedex.api.Pokemon;
+import fr.univavignon.pokedex.api.PokemonMetadata;
+import static fr.univavignon.pokedex.api.impl.PokemonMetadataProvider.pokemonMetadataProvider;
 
 import java.io.IOException;
 

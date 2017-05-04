@@ -1,5 +1,6 @@
-package test.java.fr.univavignon.pokedex.api;
+package fr.univavignon.pokedex.api;
 
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.Comparator;
 
@@ -12,13 +13,13 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
-import main.java.fr.univavignon.pokedex.api.IPokedex;
-import main.java.fr.univavignon.pokedex.api.IPokedexFactory;
-import main.java.fr.univavignon.pokedex.api.IPokemonFactory;
-import main.java.fr.univavignon.pokedex.api.IPokemonMetadataProvider;
-import main.java.fr.univavignon.pokedex.api.PokedexException;
-import main.java.fr.univavignon.pokedex.api.Pokemon;
-import main.java.fr.univavignon.pokedex.api.PokemonMetadata;
+import fr.univavignon.pokedex.api.IPokedex;
+import fr.univavignon.pokedex.api.IPokedexFactory;
+import fr.univavignon.pokedex.api.IPokemonFactory;
+import fr.univavignon.pokedex.api.IPokemonMetadataProvider;
+import fr.univavignon.pokedex.api.PokedexException;
+import fr.univavignon.pokedex.api.Pokemon;
+import fr.univavignon.pokedex.api.PokemonMetadata;
 public class IPokedexFactoryTest {
 	
 	private Pokemon pokemon = new Pokemon(0, "Bulbizarre", 126, 126, 90, 613, 64, 4000, 4, 56);
@@ -47,7 +48,7 @@ public class IPokedexFactoryTest {
 
 	
 	@Before
-	public void setUp() throws PokedexException {
+	public void setUp() throws PokedexException, IOException {
 		Mockito.when(pokemonMetadataProvider.getPokemonMetadata(0)).thenAnswer(a -> {
 			return new PokemonMetadata(0, "Bulbizarre", 126, 126, 90);
 		});

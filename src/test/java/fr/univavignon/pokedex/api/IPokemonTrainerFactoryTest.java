@@ -1,4 +1,4 @@
-package test.java.fr.univavignon.pokedex.api;
+package fr.univavignon.pokedex.api;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -12,15 +12,15 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
-import main.java.fr.univavignon.pokedex.api.IPokedex;
-import main.java.fr.univavignon.pokedex.api.IPokedexFactory;
-import main.java.fr.univavignon.pokedex.api.IPokemonFactory;
-import main.java.fr.univavignon.pokedex.api.IPokemonMetadataProvider;
-import main.java.fr.univavignon.pokedex.api.IPokemonTrainerFactory;
-import main.java.fr.univavignon.pokedex.api.Pokemon;
-import main.java.fr.univavignon.pokedex.api.PokemonMetadata;
-import main.java.fr.univavignon.pokedex.api.PokemonTrainer;
-import main.java.fr.univavignon.pokedex.api.Team;
+import fr.univavignon.pokedex.api.IPokedex;
+import fr.univavignon.pokedex.api.IPokedexFactory;
+import fr.univavignon.pokedex.api.IPokemonFactory;
+import fr.univavignon.pokedex.api.IPokemonMetadataProvider;
+import fr.univavignon.pokedex.api.IPokemonTrainerFactory;
+import fr.univavignon.pokedex.api.Pokemon;
+import fr.univavignon.pokedex.api.PokemonMetadata;
+import fr.univavignon.pokedex.api.PokemonTrainer;
+import fr.univavignon.pokedex.api.Team;
 
 public class IPokemonTrainerFactoryTest {
 
