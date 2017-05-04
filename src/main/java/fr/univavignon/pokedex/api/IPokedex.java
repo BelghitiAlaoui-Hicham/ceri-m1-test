@@ -24,8 +24,9 @@ public interface IPokedex extends IPokemonMetadataProvider, IPokemonFactory {
 	 * 
 	 * @param pokemon Pokemon to add to this pokedex.
 	 * @return Index of this pokemon relative to this pokedex.
+	 * @throws PokedexException 
 	 */
-	int addPokemon(Pokemon pokemon);
+	int addPokemon(Pokemon pokemon) throws PokedexException;
 	
 	/**
 	 * Locates the pokemon identified by the given <tt>id</tt>.
