@@ -9,6 +9,6 @@ import fr.univavignon.pokedex.api.IPokedexTest;
 public class PokedexTest extends IPokedexTest{
 	@Before
 	public void setUp() throws IOException {
-		iPokedex = new Pokedex(new PokemonMetadataProvider(), new PokemonFactory());
+		pokedexMock = new Pokedex(new PokemonMetadataProvider(), new PokemonFactory());
 	}
 }

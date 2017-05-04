@@ -95,7 +95,7 @@ public class Pokedex implements IPokedex {
 	}
 
 	@Override
-	public int addPokemon(Pokemon pokemon) throws PokedexException {
+	public int addPokemon(Pokemon pokemon) throws PokedexException{
         if (this.size() == 151) {
             throw new PokedexException("Pokedex pleins");
         }
