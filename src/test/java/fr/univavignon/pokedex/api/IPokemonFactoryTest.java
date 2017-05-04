@@ -23,7 +23,7 @@ public class IPokemonFactoryTest {
 	@Before
 	public void setUp() throws PokedexException {
 		Mockito.when(iPokemonFactory.createPokemon(0, 613, 64, 4000, 4)).thenAnswer(a -> {
-			return new Pokemon(0, "Bulbizarre", 126, 126, 90, 613, 64, 4000, 4, 56);
+			return new Pokemon(0, "Bulbasaur", 126, 126, 90, 613, 64, 4000, 4, 56);
 		});
 	}
 	
@@ -34,7 +34,7 @@ public class IPokemonFactoryTest {
 		Assert.assertEquals(0, pokemon.getIndex());
 		
 		/** Teste de Pokemon name. **/
-		Assert.assertEquals("Bulbizarre", pokemon.getName());
+		Assert.assertEquals("Bulbasaur", pokemon.getName());
 		
 		/** Teste de Pokemon attack level. **/
 		Assert.assertEquals(126, pokemon.getAttack());

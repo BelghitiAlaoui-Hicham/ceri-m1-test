@@ -23,7 +23,7 @@ import fr.univavignon.pokedex.api.PokemonMetadata;
 
 public class IPokedexTest {
 	
-	private Pokemon pokemon = new Pokemon(0, "Bulbizarre", 126, 126, 90, 613, 64, 4000, 4, 56);
+	private Pokemon pokemon = new Pokemon(0, "Bulbasaur", 126, 126, 90, 613, 64, 4000, 4, 56);
 	
 	@Mock
 	private IPokedexFactory iPokedexFactory;
@@ -57,12 +57,12 @@ public class IPokedexTest {
 			IPokedex px = iPokedexFactory.createPokedex(pokemonMetadataProvider, iPokemonFactory);
 			Assert.assertEquals(1, px.size());
 			Assert.assertEquals(0, px.addPokemon(pokemon));
-			Assert.assertEquals("Bulbizarre", px.getPokemon(0).getName());
+			Assert.assertEquals("Bulbasaur", px.getPokemon(0).getName());
 			
-			Assert.assertEquals("Bulbizarre", px.getPokemons().get(0).getName());
-			Assert.assertEquals("Bulbizarre", px.getPokemons(null).get(0).getName());
+			Assert.assertEquals("Bulbasaur", px.getPokemons().get(0).getName());
+			Assert.assertEquals("Bulbasaur", px.getPokemons(null).get(0).getName());
 			
-			Assert.assertEquals("Bulbizarre", px.getPokemons(PokemonComparators.INDEX).get(0).getName());
+			Assert.assertEquals("Bulbasaur", px.getPokemons(PokemonComparators.INDEX).get(0).getName());
 		}
 		catch (Exception ex) {
 			ex.printStackTrace();

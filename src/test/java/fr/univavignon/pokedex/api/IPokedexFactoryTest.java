@@ -22,7 +22,7 @@ import fr.univavignon.pokedex.api.Pokemon;
 import fr.univavignon.pokedex.api.PokemonMetadata;
 public class IPokedexFactoryTest {
 	
-	private Pokemon pokemon = new Pokemon(0, "Bulbizarre", 126, 126, 90, 613, 64, 4000, 4, 56);
+	private Pokemon pokemon = new Pokemon(0, "Bulbasaur", 126, 126, 90, 613, 64, 4000, 4, 56);
 	private Comparator<Pokemon> ordre = new Comparator<Pokemon>() {
 		
 		@Override
@@ -52,11 +52,11 @@ public class IPokedexFactoryTest {
 	@Before
 	public void setUp() throws PokedexException, IOException {
 		Mockito.when(pokemonMetadataProvider.getPokemonMetadata(0)).thenAnswer(a -> {
-			return new PokemonMetadata(0, "Bulbizarre", 126, 126, 90);
+			return new PokemonMetadata(0, "Bulbasaur", 126, 126, 90);
 		});
 		
 		Mockito.when(iPokemonFactory.createPokemon(0, 613, 64, 4000, 4)).thenAnswer(a -> {
-			return new Pokemon(0, "Bulbizarre", 126, 126, 90, 613, 64, 4000, 4, 56);
+			return new Pokemon(0, "Bulbasaur", 126, 126, 90, 613, 64, 4000, 4, 56);
 		});
 		
 		Mockito.when(iPokedex.size()).thenAnswer(a -> 1);
@@ -74,9 +74,9 @@ public class IPokedexFactoryTest {
 			IPokedex px = pokedexFactory.createPokedex(pokemonMetadataProvider, iPokemonFactory);
 			Assert.assertEquals(0, px.addPokemon(pokemon));
 			Assert.assertEquals(1, px.size());
-			Assert.assertEquals("Bulbizarre", px.getPokemons().get(0).getName());
-			Assert.assertEquals("Bulbizarre", px.getPokemons(ordre).get(0).getName());
-			Assert.assertEquals("Bulbizarre", px.getPokemons(null).get(0).getName());
+			Assert.assertEquals("Bulbasaur", px.getPokemons().get(0).getName());
+			Assert.assertEquals("Bulbasaur", px.getPokemons(ordre).get(0).getName());
+			Assert.assertEquals("Bulbasaur", px.getPokemons(null).get(0).getName());
 		}
 		catch (Exception ex) {
 			ex.printStackTrace();

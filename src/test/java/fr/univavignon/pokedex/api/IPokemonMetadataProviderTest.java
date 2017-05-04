@@ -27,7 +27,7 @@ public class IPokemonMetadataProviderTest {
 	@Before
 	public void setUp() throws PokedexException, IOException {
 		Mockito.when(pokemonMetadataProvider.getPokemonMetadata(0)).thenAnswer(a -> {
-			return new PokemonMetadata(0, "Bulbizarre", 126, 126, 90);
+			return new PokemonMetadata(0, "Bulbasaur", 126, 126, 90);
 		});
 	}
 	
@@ -40,7 +40,7 @@ public class IPokemonMetadataProviderTest {
 			Assert.assertEquals(0, metadata.getIndex());
 			
 			/** Teste de Pokemon name. **/
-			Assert.assertEquals("Bulbizarre", metadata.getName());
+			Assert.assertEquals("Bulbasaur", metadata.getName());
 			
 			/** Teste de Pokemon attack level. **/
 			Assert.assertEquals(126, metadata.getAttack());

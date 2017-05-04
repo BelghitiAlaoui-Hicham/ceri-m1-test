@@ -24,7 +24,7 @@ import fr.univavignon.pokedex.api.Team;
 
 public class IPokemonTrainerFactoryTest {
 
-	private Pokemon pokemon = new Pokemon(0, "Bulbizarre", 126, 126, 90, 613, 64, 4000, 4, 56);
+	private Pokemon pokemon = new Pokemon(0, "Bulbasaur", 126, 126, 90, 613, 64, 4000, 4, 56);
 	private Comparator<Pokemon> ordre = new Comparator<Pokemon>() {
 		@Override
 		public int compare(Pokemon o1, Pokemon o2) {
@@ -55,11 +55,11 @@ public class IPokemonTrainerFactoryTest {
 	@Before
 	public void setUp() throws Exception {
 		Mockito.when(pokemonMetadataProvider.getPokemonMetadata(0)).thenAnswer(a -> {
-			return new PokemonMetadata(0, "Bulbizarre", 126, 126, 90);
+			return new PokemonMetadata(0, "Bulbasaur", 126, 126, 90);
 		});
 		
 		Mockito.when(iPokemonFactory.createPokemon(0, 613, 64, 4000, 4)).thenAnswer(a -> {
-			return new Pokemon(0, "Bulbizarre", 126, 126, 90, 613, 64, 4000, 4, 56);
+			return new Pokemon(0, "Bulbasaur", 126, 126, 90, 613, 64, 4000, 4, 56);
 		});
 		
 		Mockito.when(iPokedex.size()).thenAnswer(a -> 1);
