@@ -30,7 +30,7 @@ public class IPokedexFactoryTest {
 		}
 	};
 	@Mock
-	private IPokedexFactory pokedexFactory;
+	protected IPokedexFactory pokedexFactory;
 	
 	@Mock
 	private IPokemonMetadataProvider pokemonMetadataProvider;
@@ -44,6 +44,7 @@ public class IPokedexFactoryTest {
 	@Rule
 	public MockitoRule mockitoRule = MockitoJUnit.rule();
 	
+
 	
 	@Before
 	public void setUp() throws PokedexException {

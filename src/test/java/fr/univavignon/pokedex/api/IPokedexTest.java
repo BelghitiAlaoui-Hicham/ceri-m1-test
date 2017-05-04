@@ -34,7 +34,7 @@ public class IPokedexTest {
 	private IPokemonFactory iPokemonFactory;
 	
 	@Mock
-	private IPokedex iPokedex;
+	protected IPokedex iPokedex;
 	
 	@Rule
 	public MockitoRule mockitoRule = MockitoJUnit.rule();
