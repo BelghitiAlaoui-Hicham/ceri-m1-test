@@ -41,7 +41,7 @@ public class PokemonMetadataProvider implements IPokemonMetadataProvider, Serial
 		}
     }
 	
-    private PokemonMetadataProvider() throws IOException {
+    PokemonMetadataProvider() throws IOException {
         this.getData();
     }
     

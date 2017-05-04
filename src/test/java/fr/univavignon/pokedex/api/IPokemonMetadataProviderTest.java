@@ -1,5 +1,7 @@
 package fr.univavignon.pokedex.api;
 
+import java.io.IOException;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Rule;
@@ -16,13 +18,14 @@ import fr.univavignon.pokedex.api.PokemonMetadata;
 public class IPokemonMetadataProviderTest {
 
 	@Mock
-	private static IPokemonMetadataProvider pokemonMetadataProvider;
+	protected
+	static IPokemonMetadataProvider pokemonMetadataProvider;
 	
 	@Rule 
 	public MockitoRule mockitoRule = MockitoJUnit.rule();
 	
 	@Before
-	public void setUp() throws PokedexException {
+	public void setUp() throws PokedexException, IOException {
 		Mockito.when(pokemonMetadataProvider.getPokemonMetadata(0)).thenAnswer(a -> {
 			return new PokemonMetadata(0, "Bulbizarre", 126, 126, 90);
 		});

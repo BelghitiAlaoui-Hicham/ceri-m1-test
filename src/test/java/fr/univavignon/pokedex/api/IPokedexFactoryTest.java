@@ -37,7 +37,7 @@ public class IPokedexFactoryTest {
 	private IPokemonMetadataProvider pokemonMetadataProvider;
 	
 	@Mock
-	private IPokemonFactory iPokemonFactory;
+	protected IPokemonFactory iPokemonFactory;
 	
 	@Mock
 	private IPokedex iPokedex;
@@ -45,7 +45,9 @@ public class IPokedexFactoryTest {
 	@Rule
 	public MockitoRule mockitoRule = MockitoJUnit.rule();
 	
-
+	public IPokedexFactory getProvider(){
+		return pokedexFactory;
+	}
 	
 	@Before
 	public void setUp() throws PokedexException, IOException {
@@ -63,7 +65,7 @@ public class IPokedexFactoryTest {
 		Mockito.when(iPokedex.getPokemons()).thenAnswer(a -> Arrays.asList(new Pokemon[] {pokemon} ));
 		Mockito.when(iPokedex.getPokemons(null)).thenAnswer(a -> Arrays.asList(new Pokemon[] {pokemon}  ));
 		Mockito.when(iPokedex.getPokemons(ordre)).thenAnswer(a -> Arrays.asList(new Pokemon[] {pokemon}));
-		Mockito.when(pokedexFactory.createPokedex(pokemonMetadataProvider, iPokemonFactory)).thenAnswer(a -> iPokedex);
+		Mockito.when(getProvider().createPokedex(pokemonMetadataProvider, iPokemonFactory)).thenAnswer(a -> iPokedex);
 	}
 	
 	@Test
