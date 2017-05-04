@@ -21,6 +21,6 @@ public interface IPokemonFactory {
 	 * @throws IOException 
 	 * @throws PokedexException 
 	 */
-	Pokemon createPokemon(int index, int cp, int hp, int dust, int candy);
+	Pokemon createPokemon(int index, int cp, int hp, int dust, int candy) throws PokedexException, IOException;
 	
 }

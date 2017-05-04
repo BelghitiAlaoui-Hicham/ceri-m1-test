@@ -23,10 +23,8 @@ public class PokemonFactory implements IPokemonFactory {
 	    
 	    
 	@Override
-	public Pokemon createPokemon(int index, int cp, int hp, int dust, int candy){
-		   PokemonMetadata tmp;
-		try {
-			tmp = pokemonMetadataProvider().getPokemonMetadata(index);
+	public Pokemon createPokemon(int index, int cp, int hp, int dust, int candy) throws PokedexException, IOException{
+		    PokemonMetadata tmp = pokemonMetadataProvider().getPokemonMetadata(index);
 			int tmp_iv = new CalculatorIV().calculateIV(tmp.getName(), cp, hp, dust);
 
 	        return new Pokemon(index,
@@ -40,14 +38,7 @@ public class PokemonFactory implements IPokemonFactory {
 	                candy,
 	                tmp_iv
 	        );
-		} catch (PokedexException e) {
-			e.printStackTrace();
-			return null;
-		} catch (IOException e) {
-			e.printStackTrace();
-			return null;
-			
-		}
+		
 	        
 	}
 

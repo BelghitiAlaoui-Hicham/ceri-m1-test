@@ -9,6 +9,7 @@ import java.io.IOException;
 
 
 public class PokemonFactoryTest extends IPokemonFactoryTest{
+	
 	@Override
     public IPokemonFactory getProvider() throws IOException {
         return pokemonFactory();

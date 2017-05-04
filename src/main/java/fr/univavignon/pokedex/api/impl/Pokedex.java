@@ -85,7 +85,7 @@ public class Pokedex implements IPokedex {
 	}
 
 	@Override
-	public Pokemon createPokemon(int index, int cp, int hp, int dust, int candy) {
+	public Pokemon createPokemon(int index, int cp, int hp, int dust, int candy) throws PokedexException, IOException {
 		return this.getPokemonfactory().createPokemon(index, cp, hp, dust, candy);
 	}
 
