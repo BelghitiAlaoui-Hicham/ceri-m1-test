@@ -41,6 +41,8 @@ public class IPokemonFactoryTest {
         assertEquals(bulbi.getHp(), tmp.getHp());
         assertEquals(bulbi.getDust(), tmp.getDust());
         assertEquals(bulbi.getIv(), tmp.getIv() , 0);
+        assertEquals(bulbi.getCandy(), tmp.getCandy());
+
 	}
     @Before
     public void setUp() throws PokedexException, IOException {
